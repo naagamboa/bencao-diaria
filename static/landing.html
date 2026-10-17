@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bênção Diária - Versículo e oração no seu WhatsApp todo dia</title>
+<meta name="description" content="Receba todo dia, de manhã, um versículo, uma reflexão e uma oração no seu WhatsApp. 3 dias grátis. Cancele quando quiser.">
+<style>
+  :root{--g:#1a6b3c;--g2:#2e9e5b;--gold:#d4a017;--bg:#f7f5f0;--card:#fff;--txt:#1f2937;--soft:#6b7280}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;font-size:17px}
+  .hero{background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;padding:56px 20px;text-align:center}
+  .hero h1{font-size:2.5rem;margin-bottom:12px;line-height:1.2}
+  .hero p{font-size:1.15rem;max-width:640px;margin:0 auto 26px;opacity:.96}
+  .cta{display:inline-block;background:var(--gold);color:#1a1a1a;padding:16px 38px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1.15rem;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-size:.95rem;opacity:.95}
+  .badges span{background:rgba(255,255,255,.16);padding:6px 14px;border-radius:999px}
+  .container{max-width:1000px;margin:0 auto;padding:44px 20px}
+  h2{font-size:1.7rem;color:var(--g);text-align:center;margin-bottom:6px}
+  .sub{text-align:center;color:var(--soft);margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:26px 0}
+  .card{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  .card h3{color:var(--g);margin-bottom:8px;font-size:1.15rem}
+  .chat{background:#e5ddd5;border-radius:16px;padding:18px;max-width:420px;margin:0 auto;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  .bubble{background:#fff;border-radius:12px;padding:14px 16px;font-size:.98rem;box-shadow:0 1px 2px rgba(0,0,0,.1);margin-bottom:10px}
+  .bubble b{color:#075e54}
+  .bubble.user{background:#dcf8c6;margin-left:auto;width:fit-content}
+  .price{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin:26px 0}
+  .plan{background:var(--card);border:2px solid #e5e7eb;border-radius:18px;padding:28px;min-width:270px;max-width:320px;text-align:center;position:relative;cursor:pointer;transition:transform .15s}
+  .plan:hover{transform:translateY(-3px)}
+  .plan.featured{border-color:var(--gold)}
+  .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1a1a;font-size:.8rem;font-weight:800;padding:4px 14px;border-radius:999px;white-space:nowrap}
+  .plan h3{font-size:1.25rem}
+  .plan .value{font-size:2.3rem;font-weight:800;color:var(--g)}
+  .plan .value small{font-size:1rem;color:var(--soft);font-weight:400}
+  .plan ul{list-style:none;margin:16px 0;text-align:left}
+  .plan li{padding:7px 0;border-bottom:1px solid #f1f1f1;font-size:.98rem}
+  .plan li::before{content:"✓ ";color:var(--g2);font-weight:800}
+  .form{background:var(--card);border-radius:18px;padding:30px;max-width:540px;margin:0 auto;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  .form label{display:block;margin:14px 0 5px;font-weight:600;font-size:.95rem}
+  .form input,.form select{width:100%;padding:14px;border:1px solid #d1d5db;border-radius:12px;font-size:1.05rem}
+  .form button{width:100%;margin-top:20px;padding:16px;background:var(--g);color:#fff;border:none;border-radius:12px;font-size:1.1rem;font-weight:800;cursor:pointer}
+  .form button:disabled{opacity:.6}
+  .consent{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.92rem;color:var(--soft)}
+  .consent input{width:auto;margin-top:4px}
+  .pixbox{background:#f0fdf4;border:2px dashed var(--g2);border-radius:14px;padding:18px;margin-top:20px;display:none}
+  .pixbox img{max-width:230px;display:block;margin:12px auto;border-radius:8px}
+  .pixcode{word-break:break-all;font-size:.82rem;background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:10px;display:block;max-height:110px;overflow:auto}
+  .btnCopy{margin-top:10px;background:#16a34a!important}
+  .status{margin-top:14px;font-weight:700;text-align:center}
+  .success{background:#ecfdf5;border:2px solid var(--g2);border-radius:14px;padding:22px;margin-top:20px;display:none;text-align:center}
+  .success h3{color:var(--g);font-size:1.3rem;margin-bottom:10px}
+  .success ol{text-align:left;margin:14px 0 0 20px}
+  .success li{margin:8px 0}
+  .referral{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px;margin-top:16px;font-size:.95rem;display:none}
+  .referral code{background:#fff;padding:3px 8px;border-radius:6px;font-weight:700;font-size:1rem}
+  .faq{max-width:680px;margin:0 auto}
+  .faq details{background:var(--card);border-radius:12px;padding:16px 20px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .faq summary{font-weight:700;cursor:pointer;color:var(--g)}
+  .faq p{margin-top:10px;color:#374151}
+  footer{text-align:center;padding:34px 20px;color:var(--soft);font-size:.9rem}
+  footer a{color:var(--soft)}
+  @media(max-width:600px){.hero h1{font-size:1.9rem}.plan{max-width:100%;min-width:0}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <h1>🙏 Bênção Diária</h1>
+  <p>Todo dia, de manhã, um versículo, uma reflexão e uma oração chegam no seu WhatsApp. Para você começar o dia com Deus, com paz no coração.</p>
+  <a href="#assinar" class="cta">Quero receber agora</a>
+  <div class="badges">
+    <span>✅ 3 dias grátis</span>
+    <span>✅ Cancele quando quiser</span>
+    <span>✅ Pagamento via PIX</span>
+    <span>✅ 7 dias de garantia</span>
+  </div>
+</section>
+
+<div class="container">
+  <h2>Como funciona</h2>
+  <p class="sub">Simples como mandar mensagem para um amigo.</p>
+  <div class="grid">
+    <div class="card"><h3>1️⃣ Você se cadastra</h3><p>Só o seu nome e WhatsApp. Em 1 minuto, você começa com 3 dias grátis.</p></div>
+    <div class="card"><h3>2️⃣ Recebe todo dia</h3><p>Todas as manhãs chega: versículo, reflexão e oração. No mesmo WhatsApp que você já usa.</p></div>
+    <div class="card"><h3>3️⃣ Responde “Amém”</h3><p>É assim que você confirma que recebeu. Simples: uma palavrinha de fé por dia.</p></div>
+    <div class="card"><h3>4️⃣ Indique e ganhe</h3><p>A cada amigo que assinar com seu convite, você ganha 1 mês grátis. Compartilhe a bênção!</p></div>
+  </div>
+
+  <h2 style="margin-top:50px">Veja como chega sua mensagem</h2>
+  <p class="sub">Um carinho de Deus na palma da mão.</p>
+  <div class="chat">
+    <div class="bubble"><b>Bênção Diária · 7h</b><br>🌅 Bom dia, Maria!<br><br>📖 <b>Salmos 23:1</b><br><i>O Senhor é o meu pastor; nada me faltará.</i><br><br>💭 <b>Reflexão:</b> Se Deus é o seu pastor, você não caminha sozinha. Confie hoje.<br><br>🙏 <b>Oração:</b> Senhor, cuida de mim e da minha família. Amém.<br><br>Responda <b>AMÉM</b> 🙌 para confirmar sua bênção de hoje!</div>
+    <div class="bubble user">Amém 🙏❤️</div>
+    <div class="bubble"><b>Bênção Diária</b><br>Amém! 🙏 Que alegria, Maria! 🔥 Você está há 5 dias respondendo Amém. Tenha um dia abençoado! 💚</div>
+  </div>
+
+  <h2 id="planos" style="margin-top:50px">Planos</h2>
+  <p class="sub">Escolha o seu plano. Cancele quando quiser, sem multa.</p>
+  <div class="price">
+    <div class="plan" data-plan="basic">
+      <h3>Essencial</h3>
+      <div class="value">R$ 49,90<small>/mês</small></div>
+      <ul>
+        <li>Versículo + reflexão + oração todos os dias</li>
+        <li>Resposta “Amém” com conteúdo completo</li>
+        <li>Escolha seu horário (6h, 12h ou 20h)</li>
+        <li>Suporte pelo WhatsApp</li>
+      </ul>
+      <button class="cta" style="width:100%;border:none;cursor:pointer" onclick="selectPlan('basic')">Escolher Essencial</button>
+    </div>
+    <div class="plan featured" data-plan="premium">
+      <div class="tag">✨ ESCOLHIDO POR 8 EM 10</div>
+      <h3>Premium</h3>
+      <div class="value">R$ 79,00<small>/mês</small></div>
+      <ul>
+        <li><b>Tudo do Essencial</b></li>
+        <li>Devocional especial de domingo</li>
+        <li>Pedidos de oração da comunidade</li>
+        <li>Conteúdos exclusivos de fé</li>
+        <li>Prioridade no atendimento</li>
+      </ul>
+      <button class="cta" style="width:100%;border:none;cursor:pointer" onclick="selectPlan('premium')">Escolher Premium</button>
+    </div>
+  </div>
+
+  <h2 id="assinar" style="margin-top:40px">Comece agora — 3 dias grátis</h2>
+  <p class="sub">Primeiro a assinatura, depois o PIX. Rápido e seguro.</p>
+  <form class="form" id="subForm">
+    <label>Seu primeiro nome</label>
+    <input name="name" required placeholder="Ex.: Maria" autocomplete="given-name">
+    <label>Seu WhatsApp (com DDD)</label>
+    <input name="phone" required placeholder="Ex.: (51) 99999-8888" inputmode="tel" autocomplete="tel">
+    <label>E-mail (opcional, para recibo)</label>
+    <input name="email" type="email" placeholder="maria@email.com" autocomplete="email">
+    <label>Plano</label>
+    <select name="plan" id="planSelect">
+      <option value="premium" selected>Premium — R$ 79,00/mês (recomendado)</option>
+      <option value="basic">Essencial — R$ 49,90/mês</option>
+    </select>
+    <label>Convite de um amigo? (opcional)</label>
+    <input name="referral_code" id="refInput" placeholder="Código de indicação" style="text-transform:uppercase">
+    <label class="consent">
+      <input type="checkbox" name="consent" required>
+      <span>Concordo em receber mensagens diárias no WhatsApp e aceito a <a href="/privacidade" target="_blank" style="color:var(--g)">Política de Privacidade</a> (LGPD). Posso cancelar quando quiser respondendo *PARAR*.</span>
+    </label>
+    <button type="submit" id="subBtn">Criar minha assinatura 🙏</button>
+    <div class="pixbox" id="pixbox">
+      <p style="font-weight:700;text-align:center">Falta só o pagamento! 🙏</p>
+      <p style="text-align:center;font-size:.95rem">Abra o app do seu banco e pague com PIX:</p>
+      <img id="qrimg" alt="QR Code PIX" style="display:none">
+      <span class="pixcode" id="pixcode"></span>
+      <button type="button" class="btnCopy" onclick="copyPix()">📋 Copiar código PIX</button>
+      <div class="status" id="status">⏳ Aguardando seu pagamento...</div>
+    </div>
+    <div class="referral" id="referralBox">
+      <b>🎁 Seu convite de indicação:</b><br>
+      Código: <code id="refCode"></code>
+      &nbsp;<button type="button" onclick="copyRef()" style="padding:6px 12px;border:none;border-radius:8px;background:var(--gold);font-weight:700;cursor:pointer">Copiar</button><br>
+      <span style="font-size:.9rem">Cada amigo que assinar = <b>1 mês grátis</b> para você.</span>
+    </div>
+    <div class="success" id="success">
+      <h3>🎉 Pagamento confirmado!</h3>
+      <p>Sua assinatura está ativa. Agora é só isso:</p>
+      <ol>
+        <li>Abra o <b>WhatsApp</b> no seu celular</li>
+        <li>Procure a conversa da <b>Bênção Diária</b></li>
+        <li>Responda: <b>AMÉM</b> 🙏</li>
+      </ol>
+      <p style="margin-top:12px">Pronto! Sua primeira bênção chega amanhã de manhã. Deus te abençoe! 💚</p>
+    </div>
+  </form>
+
+  <h2 style="margin-top:60px">Perguntas frequentes</h2>
+  <div class="faq">
+    <details><summary>Preciso instalar algum aplicativo?</summary><p>Não! Você recebe tudo direto no seu WhatsApp, no mesmo número que você já usa todos os dias. Não precisa instalar nada.</p></details>
+    <details><summary>Como funciona o “3 dias grátis”?</summary><p>Você se cadastra e já começa a receber. Nos primeiros 3 dias, é grátis para experimentar. Se gostar, paga o PIX e continua. Se não gostar, é só não pagar — nada é cobrado sem você pagar.</p></details>
+    <details><summary>Como pago?</summary><p>Por PIX, direto no app do seu banco. É só escanear o QR Code ou copiar o código. Muito mais seguro, e você ainda pode pagar com cartão se preferir.</p></details>
+    <details><summary>Posso mudar o horário das mensagens?</summary><p>Sim! Responda 1 (6h), 2 (12h) ou 3 (20h) na conversa do WhatsApp e mudamos na hora.</p></details>
+    <details><summary>Como cancelo?</summary><p>Simples: responda PARAR na conversa do WhatsApp. Sem ligação, sem burocracia. E se mudar de ideia, responda VOLTAR.</p></details>
+    <details><summary>E se eu não gostar? Meu dinheiro volta?</summary><p>Sim. Você tem 7 dias de garantia. Se não amar, devolvemos 100% do valor pago. Basta pedir pelo WhatsApp.</p></details>
+    <details><summary>É seguro pagar?</summary><p>Sim. O pagamento é feito pelo Mercado Pago, a maior plataforma de pagamentos do Brasil. Nunca pedimos seus dados bancários.</p></details>
+    <details><summary>Posso dar de presente para minha mãe?</summary><p>Pode! É só cadastrar o WhatsApp dela (com a permissão dela). É um presente que abençoa todo dia. 💚</p></details>
+  </div>
+</div>
+
+<footer>
+  Bênção Diária © 2026 · Feito com fé e tecnologia · <a href="/privacidade">Privacidade</a> · <a href="/admin">Painel</a>
+</footer>
+
+<script>
+const API = '';
+let currentUserId = null;
+let pollTimer = null;
+
+const params = new URLSearchParams(location.search);
+const ref = params.get('ref');
+if (ref) document.getElementById('refInput').value = ref;
+
+function selectPlan(plan){
+  document.getElementById('planSelect').value = plan;
+  document.getElementById('assinar').scrollIntoView({behavior:'smooth'});
+}
+
+const phoneInput = document.querySelector('input[name=phone]');
+phoneInput.addEventListener('input', function(){
+  let d = this.value.replace(/\D/g,'').slice(0,11);
+  let out = d;
+  if (d.length > 10) out = `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+  else if (d.length > 6) out = `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+  else if (d.length > 2) out = `(${d.slice(0,2)}) ${d.slice(2)}`;
+  else if (d.length > 0) out = `(${d}`;
+  this.value = out;
+});
+
+document.getElementById('subForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const f = e.target;
+  const btn = document.getElementById('subBtn');
+  btn.disabled = true;
+  btn.textContent = 'Criando sua assinatura...';
+  const body = {
+    name: f.name.value,
+    phone: f.phone.value,
+    email: f.email.value || null,
+    plan: f.plan.value,
+    referral_code: f.referral_code.value || null,
+    consent: f.consent.checked
+  };
+  try{
+    const r = await fetch(API+'/users/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const data = await r.json();
+    if(!r.ok){ alert(data.detail||'Algo deu errado. Tente novamente.'); btn.disabled=false; btn.textContent='Criar minha assinatura 🙏'; return; }
+    currentUserId = data.user.id;
+    const pix = data.payment;
+    document.getElementById('pixbox').style.display='block';
+    document.getElementById('pixcode').textContent = pix.pix_copy_paste || '';
+    if(pix.pix_qr){ const img = document.getElementById('qrimg'); img.src = 'data:image/png;base64,'+pix.pix_qr; img.style.display='block'; }
+    if(data.user.referral_code){
+      document.getElementById('referralBox').style.display='block';
+      document.getElementById('refCode').textContent = data.user.referral_code;
+    }
+    document.getElementById('pixbox').scrollIntoView({behavior:'smooth'});
+    startPoll();
+  }catch(err){
+    alert('Não conseguimos conectar. Verifique sua internet e tente novamente.');
+  }
+  btn.disabled = false;
+  btn.textContent = 'Criar minha assinatura 🙏';
+});
+
+function startPoll(){
+  if(pollTimer) clearInterval(pollTimer);
+  pollTimer = setInterval(async ()=>{
+    if(!currentUserId) return;
+    try{
+      const r = await fetch(API+`/users/${currentUserId}/status`);
+      const d = await r.json();
+      const pay = d.payment || {};
+      if(pay.status === 'approved'){
+        clearInterval(pollTimer);
+        document.getElementById('status').textContent = '✅ Pagamento confirmado!';
+        document.getElementById('success').style.display='block';
+        document.getElementById('success').scrollIntoView({behavior:'smooth'});
+      }
+    }catch(e){}
+  }, 5000);
+}
+
+function copyPix(){
+  const code = document.getElementById('pixcode').textContent;
+  navigator.clipboard.writeText(code).then(()=>{
+    alert('Código PIX copiado! Agora abra o app do seu banco e cole na opção "PIX Copia e Cola".');
+  }).catch(()=>{
+    const ta = document.createElement('textarea'); ta.value = code; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+    alert('Código PIX copiado!');
+  });
+}
+
+function copyRef(){
+  const code = document.getElementById('refCode').textContent;
+  const link = location.origin + '/?ref=' + code;
+  navigator.clipboard.writeText(link).catch(()=>{});
+  alert('Link de convite copiado! Envie aos seus amigos. Cada um que assinar = 1 mês grátis para você. 💚');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Admin - Bênção Diária</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#f3f4f6;margin:0;padding:20px;color:#1f2937}
+  .card{background:#fff;border-radius:12px;padding:20px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .stat{font-size:1.7rem;font-weight:800;color:#1a6b3c}
+  .label{color:#6b7280;font-size:.85rem}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:9px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:.9rem;vertical-align:top}
+  th{color:#6b7280;font-size:.8rem;text-transform:uppercase}
+  button{padding:8px 14px;border:none;border-radius:8px;background:#1a6b3c;color:#fff;cursor:pointer;font-weight:600}
+  button.sec{background:#e5e7eb;color:#1f2937}
+  button.warn{background:#b45309}
+  button.small{padding:5px 9px;font-size:.8rem}
+  input,select,textarea{padding:9px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem}
+  .login{max-width:380px;margin:60px auto}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .tabs button{background:#e5e7eb;color:#374151}
+  .tabs button.active{background:#1a6b3c;color:#fff}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+  .muted{color:#6b7280;font-size:.85rem}
+  .pill{padding:2px 8px;border-radius:999px;font-size:.78rem;font-weight:700}
+  .pill.active{background:#dcfce7;color:#166534}
+  .pill.trial{background:#dbeafe;color:#1e40af}
+  .pill.past_due{background:#fee2e2;color:#991b1b}
+  .pill.cancelled{background:#e5e7eb;color:#4b5563}
+  .pill.pending{background:#fef9c3;color:#854d0e}
+  .pill.approved{background:#dcfce7;color:#166534}
+  pre{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:10px;font-size:.82rem;overflow:auto;max-height:240px}
+  #toast{position:fixed;bottom:20px;right:20px;background:#1a6b3c;color:#fff;padding:12px 18px;border-radius:10px;display:none;font-weight:600;z-index:99}
+</style>
+</head>
+<body>
+<div id="loginBox" class="card login">
+  <h2>🙏 Painel Bênção Diária</h2>
+  <p class="muted">Entre com o e-mail e senha configurados no .env</p>
+  <input id="lemail" placeholder="E-mail" style="width:100%;margin:6px 0">
+  <input id="lpass" type="password" placeholder="Senha" style="width:100%;margin:6px 0">
+  <button onclick="login()" style="width:100%;margin-top:8px">Entrar</button>
+</div>
+
+<div id="panel" style="display:none">
+  <div class="row" style="justify-content:space-between">
+    <h1 style="margin:0;font-size:1.4rem">🙏 Painel Bênção Diária</h1>
+    <button class="sec small" onclick="logout()">Sair</button>
+  </div>
+
+  <div class="tabs">
+    <button data-tab="overview" class="active" onclick="showTab('overview')">Visão geral</button>
+    <button data-tab="users" onclick="showTab('users')">Assinantes</button>
+    <button data-tab="payments" onclick="showTab('payments')">Pagamentos</button>
+    <button data-tab="actions" onclick="showTab('actions')">Disparos</button>
+    <button data-tab="content" onclick="showTab('content')">Conteúdo</button>
+  </div>
+
+  <div id="tab-overview">
+    <div class="card"><div class="grid" id="stats"></div></div>
+    <div class="card"><h3>Resumo</h3><div id="overviewNotes" class="muted"></div></div>
+  </div>
+
+  <div id="tab-users" style="display:none">
+    <div class="card">
+      <div class="row">
+        <input id="uSearch" placeholder="Buscar por nome ou telefone" style="flex:1;min-width:200px">
+        <select id="uStatus">
+          <option value="">Todos os status</option>
+          <option value="trial">Trial</option>
+          <option value="active">Ativo</option>
+          <option value="past_due">Vencido</option>
+          <option value="cancelled">Cancelado</option>
+        </select>
+        <button onclick="loadUsers()">Buscar</button>
+      </div>
+      <table><thead><tr><th>Nome</th><th>WhatsApp</th><th>Plano</th><th>Status</th><th>Streak</th><th>Vence</th><th>Ações</th></tr></thead><tbody id="users"></tbody></table>
+      <p class="muted">Cada linha lista até 100 assinantes.</p>
+    </div>
+  </div>
+
+  <div id="tab-payments" style="display:none">
+    <div class="card">
+      <div class="row">
+        <select id="pStatus">
+          <option value="">Todos</option>
+          <option value="pending">Pendente</option>
+          <option value="approved">Aprovado</option>
+          <option value="rejected">Rejeitado</option>
+        </select>
+        <button onclick="loadPayments()">Filtrar</button>
+      </div>
+      <table><thead><tr><th>Assinante</th><th>Valor</th><th>Plano</th><th>Método</th><th>Status</th><th>Criado</th><th>Ações</th></tr></thead><tbody id="payments"></tbody></table>
+      <p class="muted">Se alguém pagou o PIX e não caiu automaticamente, clique em "Aprovar" para liberar o acesso.</p>
+    </div>
+  </div>
+
+  <div id="tab-actions" style="display:none">
+    <div class="card">
+      <h3>Disparar mensagem do dia agora</h3>
+      <p class="muted">Envia para quem está ativo e no horário escolhido. Use "Forçar" apenas em testes.</p>
+      <div class="row">
+        <button onclick="broadcast(false)">Disparar para pendentes de hoje</button>
+        <button class="warn" onclick="broadcast(true)">Forçar para TODOS (teste)</button>
+        <button class="sec" onclick="maintenance()">Rodar manutenção (renovações/expiração)</button>
+      </div>
+      <p id="actionOut" class="muted"></p>
+    </div>
+  </div>
+
+  <div id="tab-content" style="display:none">
+    <div class="card">
+      <h3>Adicionar conteúdo devocional</h3>
+      <div class="row"><input id="c_day" placeholder="Dia (1..365)" style="width:130px"><input id="c_title" placeholder="Título" style="flex:1;min-width:180px"><input id="c_ref" placeholder="Referência (ex: João 3:16)" style="flex:1;min-width:180px"></div>
+      <textarea id="c_verse" placeholder="Texto do versículo" style="width:100%;height:60px;margin-top:8px"></textarea>
+      <textarea id="c_refl" placeholder="Reflexão" style="width:100%;height:60px;margin-top:8px"></textarea>
+      <textarea id="c_pray" placeholder="Oração" style="width:100%;height:60px;margin-top:8px"></textarea>
+      <div class="row"><button onclick="addContent()">Salvar conteúdo</button></div>
+      <h3 style="margin-top:20px">Conteúdos cadastrados</h3>
+      <table><thead><tr><th>Dia</th><th>Título</th><th>Referência</th><th>Ações</th></tr></thead><tbody id="contents"></tbody></table>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+let token = sessionStorage.getItem('admin_token') || '';
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.display = 'block';
+  setTimeout(()=>{ t.style.display='none'; }, 3200);
+}
+
+async function api(path, opts={}){
+  opts.headers = Object.assign({'Authorization':'Bearer '+token,'Content-Type':'application/json'}, opts.headers||{});
+  const r = await fetch(path, opts);
+  if(r.status === 401 || r.status === 403){ logout(); throw new Error('sessão expirada'); }
+  return r;
+}
+
+async function login(){
+  const r = await fetch('/auth/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:document.getElementById('lemail').value, password:document.getElementById('lpass').value})});
+  if(!r.ok){ alert('E-mail ou senha incorretos.'); return; }
+  const d = await r.json();
+  token = d.access_token;
+  sessionStorage.setItem('admin_token', token);
+  openPanel();
+}
+
+function logout(){
+  token = '';
+  sessionStorage.removeItem('admin_token');
+  document.getElementById('loginBox').style.display = 'block';
+  document.getElementById('panel').style.display = 'none';
+}
+
+function openPanel(){
+  document.getElementById('loginBox').style.display = 'none';
+  document.getElementById('panel').style.display = 'block';
+  loadStats();
+}
+
+function showTab(name){
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  for(const tab of ['overview','users','payments','actions','content']){
+    document.getElementById('tab-'+tab).style.display = tab===name ? 'block' : 'none';
+  }
+  if(name==='users') loadUsers();
+  if(name==='payments') loadPayments();
+  if(name==='content') loadContents();
+}
+
+const STAT_LABELS = {
+  users_total:'Assinantes (total)', active:'Ativos', trial:'Em teste grátis', past_due:'Vencidos',
+  cancelled:'Cancelados', opted_out:'Pararam de receber', new_last_7d:'Novos (7 dias)',
+  revenue_total:'Receita total (R$)', mrr:'MRR estimado (R$)', messages_out_7d:'Msgs enviadas (7d)',
+  messages_in_7d:'Msgs recebidas (7d)', amen_rate_7d:'Taxa de resposta (7d %)',
+  referrals_rewarded:'Indicações premiadas', content_count:'Devocionais no acervo'
+};
+
+async function loadStats(){
+  const s = await (await api('/admin/stats')).json();
+  document.getElementById('stats').innerHTML = Object.entries(s).map(([k,v])=>
+    `<div class="card"><div class="stat">${v}</div><div class="label">${STAT_LABELS[k]||k}</div></div>`
+  ).join('');
+  const msg = s.msgs_tip ||
+    `Dica: quanto mais gente responde AMÉM, menor o custo por mensagem (janela de serviço). Taxa atual: ${s.amen_rate_7d}% em 7 dias.`;
+  document.getElementById('overviewNotes').textContent = msg;
+}
+
+async function loadUsers(){
+  const q = document.getElementById('uSearch').value.trim();
+  const st = document.getElementById('uStatus').value;
+  const u = await (await api(`/admin/users?q=${encodeURIComponent(q)}&status=${st}`)).json();
+  document.getElementById('users').innerHTML = u.map(x=>`
+    <tr>
+      <td>${x.name||'-'}</td>
+      <td>${x.phone}</td>
+      <td>${x.plan}</td>
+      <td><span class="pill ${x.status}">${x.status}</span>${x.opted_out?' <span class="pill cancelled">opt-out</span>':''}</td>
+      <td>🔥 ${x.streak}</td>
+      <td>${(x.subscription_ends_at||x.trial_ends_at||'').slice(0,10)||'-'}</td>
+      <td>
+        <button class="small" onclick="sendMsg('${x.id}')">Mensagem</button>
+        ${x.opted_out
+          ? `<button class="small sec" onclick="userAction('${x.id}','optin')">Reativar</button>`
+          : `<button class="small sec" onclick="userAction('${x.id}','optout')">Pausar envios</button>`}
+        <button class="small warn" onclick="extend('${x.id}')">+30 dias</button>
+      </td>
+    </tr>`).join('');
+}
+
+async function userAction(id, action){
+  const r = await api(`/admin/users/${id}/${action}`, {method:'POST'});
+  toast(r.ok ? 'Feito!' : 'Erro');
+  loadUsers();
+}
+
+async function extend(id){
+  const r = await api(`/admin/users/${id}/extend`, {method:'POST', body:JSON.stringify({days:30})});
+  toast(r.ok ? 'Assinatura estendida por 30 dias' : 'Erro');
+  loadUsers();
+}
+
+async function sendMsg(id){
+  const text = prompt('Mensagem para enviar no WhatsApp deste assinante:');
+  if(!text) return;
+  const r = await api(`/admin/users/${id}/message`, {method:'POST', body:JSON.stringify({text})});
+  toast(r.ok ? 'Mensagem enviada!' : 'Falha ao enviar');
+}
+
+async function loadPayments(){
+  const st = document.getElementById('pStatus').value;
+  const p = await (await api(`/admin/payments?status=${st}`)).json();
+  document.getElementById('payments').innerHTML = p.map(x=>`
+    <tr>
+      <td>${x.user}<br><span class="muted">${x.phone}</span></td>
+      <td>R$ ${Number(x.amount).toFixed(2)}</td>
+      <td>${x.plan}</td>
+      <td>${x.method}</td>
+      <td><span class="pill ${x.status}">${x.status}</span></td>
+      <td>${(x.created_at||'').slice(0,16).replace('T',' ')}</td>
+      <td>${x.status==='pending' ? `<button class="small" onclick="approve('${x.id}')">Aprovar</button>` : '-'}</td>
+    </tr>`).join('');
+}
+
+async function approve(id){
+  if(!confirm('Confirmar que este pagamento foi recebido? O acesso será liberado por 30 dias.')) return;
+  const r = await api(`/admin/payments/${id}/approve`, {method:'POST'});
+  toast(r.ok ? 'Pagamento aprovado e acesso liberado!' : 'Erro');
+  loadPayments();
+}
+
+async function broadcast(force){
+  const r = await api(`/admin/broadcast?force=${force}`, {method:'POST'});
+  const d = await r.json();
+  document.getElementById('actionOut').textContent = `Enviadas: ${d.sent} · Ignoradas: ${d.skipped}`;
+  toast('Disparo concluído');
+}
+
+async function maintenance(){
+  const r = await api('/admin/maintenance', {method:'POST'});
+  const d = await r.json();
+  document.getElementById('actionOut').textContent = `Vencidos: ${d.expired} · Lembretes: ${d.reminders} · Boas-vindas: ${d.welcome} · Recuperados: ${d.winback}`;
+  toast('Manutenção concluída');
+}
+
+async function addContent(){
+  const body = {
+    day_index: parseInt(document.getElementById('c_day').value),
+    title: document.getElementById('c_title').value,
+    verse_ref: document.getElementById('c_ref').value,
+    verse_text: document.getElementById('c_verse').value,
+    reflection: document.getElementById('c_refl').value,
+    prayer: document.getElementById('c_pray').value
+  };
+  if(!body.day_index || !body.title || !body.verse_ref){ alert('Preencha dia, título e referência.'); return; }
+  const r = await api('/content', {method:'POST', body:JSON.stringify(body)});
+  toast(r.ok ? 'Conteúdo salvo!' : 'Erro ao salvar');
+  loadContents();
+}
+
+async function loadContents(){
+  const c = await (await fetch('/content?limit=100')).json();
+  document.getElementById('contents').innerHTML = c.map(x=>`
+    <tr><td>${x.day_index}</td><td>${x.title}</td><td>${x.verse_ref}</td>
+    <td><button class="small warn" onclick="delContent('${x.id}')">Excluir</button></td></tr>`).join('');
+}
+
+async function delContent(id){
+  if(!confirm('Excluir este conteúdo?')) return;
+  const r = await api(`/content/${id}`, {method:'DELETE'});
+  toast(r.ok ? 'Excluído' : 'Erro');
+  loadContents();
+}
+
+if(token){ openPanel(); }
+</script>
+</body>
+</html>
