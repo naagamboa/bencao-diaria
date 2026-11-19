@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14565c">
+  <meta name="description" content="Caderno de estudos de Clínica Integrada em Odontologia: Periodontia, Dentística, Prótese e Cirurgia, com aulas, flashcards, questões comentadas, simulado e resumão.">
+  <title>Clínica Integrada · Caderno de estudos</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3c-4.8 0-7.5 2.8-7.5 6.6 0 3 1.6 5.2 2.4 8.8.6 2.8 1 3.6 2.2 3.6 1.3 0 1.5-3.2 2.9-3.2s1.6 3.2 2.9 3.2c1.2 0 1.6-.8 2.2-3.6.8-3.6 2.4-5.8 2.4-8.8C19.5 5.8 16.8 3 12 3Z"/><path d="M9 7.5c1-.8 2.2-1.2 3.4-1.2"/></symbol>
+    <symbol id="i-scaler" viewBox="0 0 24 24"><path d="M4 20 16.5 7.5"/><path d="M15 4.5 19.5 9l-3 3L12 7.5l3-3Z"/><path d="M4 20l2.5-.5.5-2.5"/></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24"><path d="m14 4 6 6M17 7l-9 9-4 1 1-4 9-9"/><path d="m8 10 6 6M4 20l-1 1"/><path d="M13 3l1.5 1.5"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m4 8 3.5 3L12 5l4.5 6L20 8l-2 11H6L4 8Z"/><path d="M6 15h12"/></symbol>
+    <symbol id="i-floss" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="6"/><path d="M7 10c2 1.5 4 1.5 6 0s4-1.5 6 0"/><path d="M7 14c2-1.5 4-1.5 6 0s4 1.5 6 0"/></symbol>
+    <symbol id="i-xray" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="5"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2"/><path d="M12 7v10"/></symbol>
+    <symbol id="i-shield-plus" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M12 8v6M9 11h6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5Z"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="15" rx="2.5"/><path d="M8 3h11a2 2 0 0 1 2 2v12"/></symbol>
+    <symbol id="i-quiz" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M9.5 9a2.5 2.5 0 1 1 3.9 2.1c-.9.6-1.4 1.2-1.4 2.4"/><circle cx="12" cy="17.3" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-notes" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h7M9 16h5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 11a8 8 0 1 1 2.3 5.7M4 5v6h6"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M4 7h3c4 0 6 10 10 10h3M4 17h3c1.5 0 2.7-1.4 3.8-3M17 4l3 3-3 3M17 14l3 3-3 3"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M8 14h2M14 14h2M8 17h2"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 13v5M8 21h8M9 18h6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.5"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 22 21H2L12 3Z"/><path d="M12 9v5M12 17.5v.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5.8 1.1.8 1.8h5.4c0-.7.2-1.3.8-1.8A6 6 0 0 0 12 3Z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.5M3 12h.5M3 18h.5"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-bone" viewBox="0 0 24 24"><path d="M7 7a3 3 0 1 0-3 3 3 3 0 1 0 3 3l7-7a3 3 0 1 0 3-3 3 3 0 1 0-3 3L7 13"/></symbol>
+  </svg>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio" data-view="inicio" aria-label="Clínica Integrada — início">
+        <span class="brand-mark"><svg><use href="#i-tooth"></use></svg></span>
+        <span class="brand-text"><strong>Clínica Integrada</strong><small>caderno de estudos · odontologia</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#aprender" data-view="aprender">Aprender</a>
+        <a href="#flashcards" data-view="flashcards">Flashcards</a>
+        <a href="#questoes" data-view="questoes">Questões</a>
+        <a href="#simulado" data-view="simulado">Simulado</a>
+        <a href="#resumo" data-view="resumo">Resumão</a>
+        <a href="#materiais" data-view="materiais">Materiais</a>
+        <a href="#glossario" data-view="glossario">Glossário</a>
+        <a href="#plano" data-view="plano">Plano</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="subject-btn" id="btn-subject" type="button" hidden aria-haspopup="dialog">
+          <span class="subject-dot" aria-hidden="true"></span>
+          <span id="subject-btn-label">Matéria</span>
+          <svg aria-hidden="true"><use href="#i-chevron"></use></svg>
+        </button>
+        <button class="icon-btn" id="btn-search" aria-label="Buscar no site" title="Buscar (/)"><svg><use href="#i-search"></use></svg></button>
+        <button class="icon-btn" id="btn-theme" aria-label="Alternar tema claro e escuro" title="Tema"><svg class="icon-sun"><use href="#i-sun"></use></svg><svg class="icon-moon"><use href="#i-moon"></use></svg></button>
+        <button class="icon-btn menu-btn" id="btn-menu" aria-label="Abrir menu" aria-expanded="false"><svg><use href="#i-menu"></use></svg></button>
+      </div>
+    </div>
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  </header>
+
+  <!-- ===================== SELEÇÃO DE MATÉRIA ===================== -->
+  <div class="subject-gate" id="subject-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="subject-gate-box">
+      <button class="icon-btn gate-close" id="btn-close-gate" type="button" aria-label="Fechar e voltar ao estudo" hidden><svg><use href="#i-close"></use></svg></button>
+      <p class="eyebrow"><span class="dot"></span> Clínica Integrada III · 2026/2</p>
+      <h1 id="gate-title">Qual matéria vamos estudar <em>agora</em>?</h1>
+      <p class="gate-lead">Escolha uma UC. O site mostra somente o conteúdo dela — aulas, flashcards, questões, simulado, resumão, glossário e plano. As quatro áreas ficam separadas; a revisão integrada é opcional.</p>
+      <div class="subject-gate-grid">
+        <button class="subject-choice track-perio" type="button" data-subject-choice="perio">
+          <span class="subject-choice-top"><span class="track-icon"><svg><use href="#i-scaler"></use></svg></span><span class="subject-choice-kicker">UC Periodontia</span></span>
+          <strong>Periodontia</strong>
+          <span class="subject-choice-desc">Exame periodontal, PSR, classificação 2017 (estágio/grau), RAR, cirurgia e manutenção.</span>
+          <span class="subject-choice-meta">2 módulos · 6 aulas · 24 flashcards · 20 questões</span>
+          <span class="subject-choice-cta">Estudar Periodontia <svg><use href="#i-arrow"></use></svg></span>
+        </button>
+        <button class="subject-choice track-dent" type="button" data-subject-choice="dent">
+          <span class="subject-choice-top"><span class="track-icon"><svg><use href="#i-tooth"></use></svg></span><span class="subject-choice-kicker">UC Dentística</span></span>
+          <strong>Dentística</strong>
+          <span class="subject-choice-desc">Cárie e ICDAS, preparos, adesão, resina composta, ionômero e falhas restauradoras.</span>
+          <span class="subject-choice-meta">2 módulos · 6 aulas · 24 flashcards · 20 questões</span>
+          <span class="subject-choice-cta">Estudar Dentística <svg><use href="#i-arrow"></use></svg></span>
+        </button>
+        <button class="subject-choice track-prot" type="button" data-subject-choice="prot">
+          <span class="subject-choice-top"><span class="track-icon"><svg><use href="#i-crown"></use></svg></span><span class="subject-choice-kicker">UC Prótese</span></span>
+          <strong>Prótese</strong>
+          <span class="subject-choice-desc">PPR (Kennedy/Applegate), coroas, prótese total, DVO, RC/MIC e ajuste oclusal.</span>
+          <span class="subject-choice-meta">2 módulos · 6 aulas · 24 flashcards · 20 questões</span>
+          <span class="subject-choice-cta">Estudar Prótese <svg><use href="#i-arrow"></use></svg></span>
+        </button>
+        <button class="subject-choice track-cir" type="button" data-subject-choice="cir">
+          <span class="subject-choice-top"><span class="track-icon"><svg><use href="#i-syringe"></use></svg></span><span class="subject-choice-kicker">UC Cirurgia</span></span>
+          <strong>Cirurgia</strong>
+          <span class="subject-choice-desc">Exodontia, instrumental, anestesia e doses, sutura, pós-operatório e urgências.</span>
+          <span class="subject-choice-meta">2 módulos · 6 aulas · 24 flashcards · 20 questões</span>
+          <span class="subject-choice-cta">Estudar Cirurgia <svg><use href="#i-arrow"></use></svg></span>
+        </button>
+        <button class="subject-choice subject-choice-wide track-integ" type="button" data-subject-choice="integ">
+          <span class="subject-choice-top"><span class="track-icon"><svg><use href="#i-target"></use></svg></span><span class="subject-choice-kicker">Revisão final · opcional</span></span>
+          <strong>Casos integrados</strong>
+          <span class="subject-choice-desc">A sequência do plano de tratamento, casos que misturam as quatro UCs e o checklist de véspera. Use só depois de estudar cada matéria separadamente.</span>
+          <span class="subject-choice-meta">1 módulo · 3 aulas · 12 flashcards · 10 questões</span>
+          <span class="subject-choice-cta">Abrir revisão integrada <svg><use href="#i-arrow"></use></svg></span>
+        </button>
+      </div>
+      <p class="gate-note">Você pode trocar de matéria a qualquer momento pelo botão no topo.</p>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ===================== INÍCIO ===================== -->
+    <section class="view" id="view-inicio" data-view-name="inicio">
+      <div class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Clínica Integrada III · Odontologia UNR Zona Sul · 2026/2</p>
+          <h1>Clínica <em>Integrada</em><span class="h1-note">as quatro áreas em uma só cabeça</span></h1>
+          <p class="hero-lead">A prova não cobra quatro disciplinas isoladas: cobra a <strong>decisão clínica</strong> que liga periodontia, dentística, prótese e cirurgia. Aqui você estuda o conteúdo de cada UC e treina a conexão entre elas.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-go="aprender" data-lesson="m1l1">Começar do zero <svg><use href="#i-arrow"></use></svg></button>
+            <button class="btn btn-ghost" data-go="simulado"><svg><use href="#i-trophy"></use></svg> Fazer simulado</button>
+          </div>
+          <div class="hero-facts" aria-label="Conteúdo do curso">
+            <span><strong>9</strong> módulos</span>
+            <span><strong>27</strong> aulas</span>
+            <span><strong>108</strong> flashcards</span>
+            <span><strong>90</strong> questões</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="countdown-card">
+            <div class="countdown-head">
+              <span class="countdown-label"><svg><use href="#i-calendar"></use></svg> <span id="countdown-title">Contagem para a prova</span></span>
+              <button class="text-btn" id="btn-edit-date">ajustar</button>
+            </div>
+            <div class="countdown" id="countdown" aria-live="polite">
+              <div><strong id="cd-days">—</strong><span>dias</span></div>
+              <div><strong id="cd-hours">—</strong><span>horas</span></div>
+              <div><strong id="cd-min">—</strong><span>min</span></div>
+              <div><strong id="cd-sec">—</strong><span>seg</span></div>
+            </div>
+            <div class="date-editor" id="date-editor" hidden>
+              <label for="exam-date-input">Data e hora da prova</label>
+              <div class="date-editor-row">
+                <input type="datetime-local" id="exam-date-input">
+                <button class="btn btn-small btn-primary" id="btn-save-date">Salvar</button>
+              </div>
+            </div>
+            <p class="countdown-note" id="countdown-note">A data da prova ainda não foi publicada na uLife. Use “ajustar” para registrá-la.</p>
+          </div>
+
+          <div class="hero-illustration" aria-hidden="true">
+            <svg viewBox="0 0 420 300" role="presentation">
+              <defs>
+                <linearGradient id="toothGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e4f1ef"/>
+                </linearGradient>
+                <linearGradient id="rootGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#d7e9e6"/><stop offset="1" stop-color="#b9d6d2"/>
+                </linearGradient>
+              </defs>
+              <circle cx="210" cy="150" r="132" fill="#dcebe8" opacity=".75"/>
+              <circle cx="210" cy="150" r="104" fill="#eef6f4"/>
+              <path d="M210 54c-46 0-76 30-76 72 0 28 12 48 19 82 6 30 10 46 24 46 13 0 14-34 27-34s14 34 27 34c14 0 18-16 24-46 7-34 19-54 19-82 0-42-30-72-76-72Z" fill="url(#toothGrad)" stroke="#14565c" stroke-width="3"/>
+              <path d="M210 54c-46 0-76 30-76 72 0 28 12 48 19 82 6 30 10 46 24 46 13 0 14-34 27-34" fill="url(#rootGrad)" opacity=".85"/>
+              <path d="M166 112c6-22 22-36 44-38" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity=".9"/>
+              <path d="M150 188c8 20 12 38 20 52" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+              <g fill="#14565c">
+                <circle cx="210" cy="110" r="5"/>
+                <circle cx="188" cy="126" r="3" opacity=".55"/>
+                <circle cx="232" cy="128" r="3" opacity=".55"/>
+              </g>
+              <g font-family="Nunito Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">
+                <rect x="62" y="66" width="74" height="24" rx="12" fill="#14565c"/>
+                <text x="99" y="82" fill="#fff">PERIO</text>
+                <rect x="286" y="78" width="74" height="24" rx="12" fill="#b0653c"/>
+                <text x="323" y="94" fill="#fff">DENT</text>
+                <rect x="58" y="214" width="74" height="24" rx="12" fill="#8a6a2f"/>
+                <text x="95" y="230" fill="#fff">PRÓT</text>
+                <rect x="288" y="208" width="74" height="24" rx="12" fill="#7a3f52"/>
+                <text x="325" y="224" fill="#fff">CIR</text>
+              </g>
+              <g fill="none" stroke="#14565c" stroke-width="1.6" opacity=".35">
+                <path d="M136 82c18 6 30 14 40 26"/>
+                <path d="M284 92c-18 4-30 10-40 20"/>
+                <path d="M132 212c16-4 30-10 40-20"/>
+                <path d="M288 206c-16-4-30-10-40-20"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap home-body">
+        <section class="stats-row" aria-label="Seu progresso">
+          <article class="stat-card">
+            <span class="stat-icon"><svg><use href="#i-book"></use></svg></span>
+            <div><strong id="stat-lessons">0/27</strong><span>aulas concluídas</span></div>
+            <div class="mini-bar"><i id="stat-lessons-bar"></i></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon"><svg><use href="#i-cards"></use></svg></span>
+            <div><strong id="stat-cards">0/108</strong><span>flashcards dominados</span></div>
+            <div class="mini-bar"><i id="stat-cards-bar"></i></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon"><svg><use href="#i-quiz"></use></svg></span>
+            <div><strong id="stat-questions">0</strong><span>questões respondidas</span></div>
+            <div class="mini-bar"><i id="stat-questions-bar"></i></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon"><svg><use href="#i-target"></use></svg></span>
+            <div><strong id="stat-accuracy">—</strong><span>de acerto</span></div>
+            <div class="mini-bar"><i id="stat-accuracy-bar"></i></div>
+          </article>
+        </section>
+
+        <section class="section-block agenda-block">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Direto da uLife</p>
+              <h2>Sua agenda desta semana</h2>
+              <p class="section-sub">Turma ODO1AM-ZSH2 · Estágio curricular supervisionado: Clínica Integrada III.</p>
+            </div>
+            <button class="btn btn-ghost btn-small" data-go="plano">Ver plano de estudo <svg><use href="#i-calendar"></use></svg></button>
+          </div>
+          <div class="agenda-grid">
+            <article class="agenda-card"><span class="agenda-day">Qua · 18/11</span><strong>08:50–11:40</strong><p>Clínica Integrada III</p><small>Presencial · Bloco C, subsolo I, S02c · Prof. Filipe Reis Garcia</small></article>
+            <article class="agenda-card"><span class="agenda-day">Qui · 19/11</span><strong>08:50–11:40</strong><p>Clínica Integrada III</p><small>Presencial · Bloco C, subsolo I, S02c · Profa. Jessica Naiara Araujo de Souza</small></article>
+            <article class="agenda-card"><span class="agenda-day">Qui · 19/11</span><strong>19:00–21:50</strong><p>Reabilitação oral e protética</p><small>Presencial · Bloco C, 5º andar, 520c · Profa. Caroline Luiz Angonese</small></article>
+            <article class="agenda-card agenda-alert"><span class="agenda-day">Prova</span><strong>A confirmar</strong><p>Avaliação ainda não publicada</p><small>Em “Atividades Avaliativas” a UC mostra apenas “Lançamento Final”. Confirme com a professora e ajuste a data no contador.</small></article>
+          </div>
+        </section>
+
+        <section class="home-grid">
+          <div class="continue-card" id="continue-card">
+            <p class="eyebrow">Continue de onde parou</p>
+            <h2 id="continue-title">Comece pela primeira aula</h2>
+            <p id="continue-desc">Periodontia: exame, sondagem e classificação — a base de todo plano de tratamento.</p>
+            <button class="btn btn-primary btn-small" id="btn-continue">Retomar estudo <svg><use href="#i-arrow"></use></svg></button>
+          </div>
+          <div class="method-card">
+            <p class="eyebrow">Como este site ensina</p>
+            <ol class="method-list">
+              <li><span>1</span><div><strong>Entenda a decisão clínica</strong><p>O porquê de cada conduta, com casos e critérios — não só listas soltas.</p></div></li>
+              <li><span>2</span><div><strong>Fixe com flashcards</strong><p>Classificações, doses, sequências e pegadinhas em perguntas curtas.</p></div></li>
+              <li><span>3</span><div><strong>Teste e corrija</strong><p>Questões comentadas e simulado cronometrado, com revisão dos erros.</p></div></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section-block" id="modules-section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Trilha completa</p>
+              <h2>Os 9 módulos da prova</h2>
+              <p class="section-sub">Quatro UCs, duas ondas cada, mais um módulo de integração. Cada módulo tem 3 aulas, flashcards e questões.</p>
+            </div>
+            <button class="btn btn-ghost btn-small" data-go="plano">Ver plano de 7 dias <svg><use href="#i-calendar"></use></svg></button>
+          </div>
+          <div class="module-grid" id="home-modules"></div>
+        </section>
+
+        <section class="section-block exam-focus">
+          <div class="exam-focus-copy">
+            <p class="eyebrow">O que a prova cobra</p>
+            <h2>As 4 UCs e os assuntos que mais caem</h2>
+            <p>A banca mistura as áreas em casos clínicos. Domine o núcleo de cada uma antes de tentar integrar.</p>
+            <button class="btn btn-primary btn-small" data-go="resumo">Abrir resumão <svg><use href="#i-notes"></use></svg></button>
+          </div>
+          <ul class="focus-list">
+            <li><span>01</span><div><strong>Periodontia</strong><p>Exame, PSR, classificação 2017 (estágio/grau), RAR e manutenção.</p></div></li>
+            <li><span>02</span><div><strong>Dentística</strong><p>Cárie, ICDAS, preparos, adesão, resina composta e proteção pulpar.</p></div></li>
+            <li><span>03</span><div><strong>Prótese</strong><p>PPR (Kennedy/Applegate), coroas, prótese total, oclusão e ajuste.</p></div></li>
+            <li><span>04</span><div><strong>Cirurgia</strong><p>Exodontia, instrumental, anestesia (doses), sutura e pós-operatório.</p></div></li>
+          </ul>
+        </section>
+
+        <section class="section-block note-block">
+          <div class="note-inner">
+            <svg><use href="#i-info"></use></svg>
+            <div>
+              <strong>Como usar este caderno</strong>
+              <p>O conteúdo segue o que é cobrado nas UCs de Periodontia, Dentística, Prótese e Cirurgia e foi organizado para a prova de Clínica Integrada. Comece pelo <button class="text-btn" data-go="aprender">Aprender</button>, passe pelos flashcards do módulo e feche com 10 questões. Na véspera, use o <button class="text-btn" data-go="resumo">Resumão</button> e o simulado.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===================== APRENDER ===================== -->
+    <section class="view" id="view-aprender" data-view-name="aprender" hidden>
+      <div class="learn-layout wrap">
+        <aside class="learn-sidebar" aria-label="Módulos e aulas">
+          <div class="sidebar-head">
+            <p class="eyebrow">Conteúdo</p>
+            <h2>Aprender</h2>
+            <div class="sidebar-progress"><span id="sidebar-progress-label">0 de 27 aulas</span><div class="mini-bar"><i id="sidebar-progress-bar"></i></div></div>
+          </div>
+          <div id="module-list" class="module-list"></div>
+        </aside>
+        <div class="lesson-panel">
+          <div class="lesson-empty" id="lesson-empty">
+            <span class="empty-icon"><svg><use href="#i-book"></use></svg></span>
+            <h2>Escolha uma aula para começar</h2>
+            <p>Recomendo seguir a ordem dos módulos. Cada aula leva de 7 a 10 minutos e termina com um teste rápido.</p>
+            <button class="btn btn-primary btn-small" data-lesson="m1l1">Abrir a primeira aula <svg><use href="#i-arrow"></use></svg></button>
+          </div>
+          <article class="lesson-article" id="lesson-article" hidden>
+            <header class="lesson-head">
+              <div class="lesson-kicker">
+                <span class="module-pill" id="lesson-module-pill"></span>
+                <span class="lesson-time"><svg><use href="#i-clock"></use></svg> <span id="lesson-minutes"></span> min</span>
+              </div>
+              <h1 id="lesson-title"></h1>
+              <p class="lesson-intro" id="lesson-intro"></p>
+              <div class="lesson-actions">
+                <button class="btn btn-small btn-primary" id="btn-complete-lesson"><svg><use href="#i-check"></use></svg> Marcar como concluída</button>
+                <button class="btn btn-small btn-ghost" id="btn-lesson-cards"><svg><use href="#i-cards"></use></svg> Flashcards deste módulo</button>
+                <button class="btn btn-small btn-ghost" id="btn-lesson-quiz"><svg><use href="#i-quiz"></use></svg> Questões deste módulo</button>
+              </div>
+            </header>
+            <div class="lesson-content" id="lesson-content"></div>
+            <footer class="lesson-foot">
+              <button class="btn btn-ghost btn-small" id="btn-prev-lesson"><svg><use href="#i-arrow-left"></use></svg> Anterior</button>
+              <div class="lesson-foot-mid" id="lesson-position"></div>
+              <button class="btn btn-primary btn-small" id="btn-next-lesson">Próxima aula <svg><use href="#i-arrow"></use></svg></button>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FLASHCARDS ===================== -->
+    <section class="view" id="view-flashcards" data-view-name="flashcards" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Memória ativa</p>
+          <h1>Flashcards</h1>
+          <p>Leia a frente, tente responder em voz alta e só então vire o cartão. Marque <strong>sabia</strong> ou <strong>revisar</strong> — o site guarda seu progresso.</p>
+        </header>
+        <div class="toolbar">
+          <label class="field"><span>Módulo</span><select id="cards-module"><option value="all">Todos os módulos</option></select></label>
+          <label class="field"><span>Ordem</span><select id="cards-order"><option value="default">Na ordem do conteúdo</option><option value="shuffle">Embaralhados</option><option value="review">Só os que preciso revisar</option></select></label>
+          <button class="btn btn-ghost btn-small" id="btn-reset-deck"><svg><use href="#i-refresh"></use></svg> Reiniciar baralho</button>
+        </div>
+        <div class="deck-layout">
+          <div class="flashcard-stage">
+            <div class="deck-meta"><span id="card-counter">Cartão 1 de 108</span><span id="card-module-label"></span></div>
+            <button class="flashcard" id="flashcard" aria-label="Virar flashcard">
+              <div class="flashcard-inner">
+                <div class="flashcard-face flashcard-front">
+                  <span class="card-tag" id="card-tag-front">Pergunta</span>
+                  <p id="card-front">Carregando…</p>
+                  <span class="flip-hint"><svg><use href="#i-refresh"></use></svg> clique para virar</span>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                  <span class="card-tag" id="card-tag-back">Resposta</span>
+                  <p id="card-back"></p>
+                  <span class="flip-hint"><svg><use href="#i-refresh"></use></svg> clique para voltar</span>
+                </div>
+              </div>
+            </button>
+            <div class="card-actions">
+              <button class="btn btn-review" id="btn-card-review"><svg><use href="#i-refresh"></use></svg> Preciso revisar</button>
+              <button class="btn btn-known" id="btn-card-known">Já sabia <svg><use href="#i-check"></use></svg></button>
+            </div>
+            <p class="key-hint">Atalhos: <kbd>Espaço</kbd> vira · <kbd>1</kbd> revisar · <kbd>2</kbd> sabia · <kbd>→</kbd> próximo</p>
+          </div>
+          <aside class="deck-side">
+            <div class="side-card">
+              <h3>Seu baralho</h3>
+              <div class="deck-stats">
+                <div><strong id="deck-known">0</strong><span>dominados</span></div>
+                <div><strong id="deck-review">0</strong><span>para revisar</span></div>
+                <div><strong id="deck-unseen">108</strong><span>não vistos</span></div>
+              </div>
+              <div class="mini-bar"><i id="deck-bar"></i></div>
+              <p class="side-note" id="deck-note">Comece pelos cartões do módulo que você acabou de estudar.</p>
+            </div>
+            <div class="side-card">
+              <h3>Como usar</h3>
+              <ul class="tip-list">
+                <li><strong>Tente responder antes de virar.</strong> O esforço de lembrar é o que fixa.</li>
+                <li><strong>Não marque “sabia” se chutou.</strong> Melhor revisar duas vezes do que se enganar.</li>
+                <li><strong>Volte aos errados no mesmo dia.</strong> Use a opção “só os que preciso revisar”.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUESTÕES ===================== -->
+    <section class="view" id="view-questoes" data-view-name="questoes" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Treino com correção</p>
+          <h1>Questões comentadas</h1>
+          <p>Escolha um módulo ou misture tudo. Cada resposta vem com explicação e o motivo dos erros.</p>
+        </header>
+
+        <div class="quiz-setup" id="quiz-setup">
+          <div class="setup-card">
+            <h2>Montar treino</h2>
+            <div class="setup-grid">
+              <label class="field"><span>Módulo</span><select id="quiz-module"><option value="all">Todos os módulos</option></select></label>
+              <label class="field"><span>Quantidade</span><select id="quiz-count"><option value="10">10 questões</option><option value="20" selected>20 questões</option><option value="30">30 questões</option><option value="all">Todas</option></select></label>
+              <label class="field"><span>Nível</span><select id="quiz-level"><option value="all">Todos</option><option value="facil">Fácil</option><option value="medio">Médio</option><option value="dificil">Difícil</option></select></label>
+            </div>
+            <button class="btn btn-primary" id="btn-start-quiz">Começar treino <svg><use href="#i-arrow"></use></svg></button>
+            <p class="setup-note">Dica: comece com 10 questões do módulo que acabou de ler. Depois misture as quatro áreas.</p>
+          </div>
+          <div class="setup-side">
+            <div class="side-card">
+              <h3>Desempenho geral</h3>
+              <div class="big-score"><strong id="quiz-overall-accuracy">—</strong><span>de acerto</span></div>
+              <p class="side-note"><span id="quiz-overall-count">0 questões respondidas</span></p>
+            </div>
+            <div class="side-card">
+              <h3>Últimos treinos</h3>
+              <ul class="history-list" id="quiz-history"><li class="empty-history">Nenhum treino ainda.</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-game" id="quiz-game" hidden>
+          <div class="game-top">
+            <button class="text-btn" id="btn-quit-quiz"><svg><use href="#i-arrow-left"></use></svg> sair</button>
+            <span id="quiz-progress-label">Questão 1 de 20</span>
+            <span id="quiz-score-label">0 acertos</span>
+          </div>
+          <div class="game-progress"><i id="quiz-progress-bar"></i></div>
+          <article class="question-card">
+            <div class="question-tags"><span id="quiz-q-module"></span><span id="quiz-q-level"></span></div>
+            <h2 id="quiz-question"></h2>
+            <div class="options" id="quiz-options"></div>
+            <div class="feedback" id="quiz-feedback" hidden></div>
+            <div class="question-actions">
+              <button class="btn btn-primary" id="btn-confirm-quiz" disabled>Confirmar resposta</button>
+              <button class="btn btn-primary" id="btn-next-quiz" hidden>Próxima <svg><use href="#i-arrow"></use></svg></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="quiz-results" id="quiz-results" hidden>
+          <div class="result-hero">
+            <span class="result-icon"><svg><use href="#i-trophy"></use></svg></span>
+            <p class="eyebrow">Treino concluído</p>
+            <h2 id="quiz-result-title">Muito bem!</h2>
+            <div class="result-score"><strong id="quiz-result-score">0</strong><span id="quiz-result-total">/ 20</span></div>
+            <p id="quiz-result-message"></p>
+            <div class="result-actions">
+              <button class="btn btn-primary" id="btn-quiz-errors">Revisar erros</button>
+              <button class="btn btn-ghost" id="btn-quiz-retry">Novo treino</button>
+            </div>
+          </div>
+          <div class="result-breakdown" id="quiz-breakdown"></div>
+          <div class="review-list" id="quiz-review"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SIMULADO ===================== -->
+    <section class="view" id="view-simulado" data-view-name="simulado" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Reta final</p>
+          <h1>Simulado da prova</h1>
+          <p>30 questões, 45 minutos, sem correção imediata. No fim, veja o mapa dos seus erros por área.</p>
+        </header>
+
+        <div class="exam-setup" id="exam-setup">
+          <div class="exam-hero-card">
+            <span class="exam-badge"><svg><use href="#i-clock"></use></svg> 45 minutos</span>
+            <h2>Condições do simulado</h2>
+            <ul class="exam-rules">
+              <li><span>30</span> questões das quatro UCs</li>
+              <li><span>45</span> minutos de cronômetro</li>
+              <li><span>1</span> resposta por questão</li>
+              <li><span>0</span> consulta ao conteúdo durante o teste</li>
+            </ul>
+            <p class="setup-note">Você pode navegar entre questões e marcar as difíceis para revisar antes de entregar.</p>
+            <button class="btn btn-primary" id="btn-start-exam">Iniciar simulado <svg><use href="#i-play"></use></svg></button>
+            <p class="best-score" id="exam-best">Melhor resultado: —</p>
+          </div>
+          <div class="setup-side">
+            <div class="side-card">
+              <h3>Estratégia de prova</h3>
+              <ul class="tip-list">
+                <li><strong>Leia a última linha primeiro.</strong> Ela costuma dizer exatamente o que a questão quer.</li>
+                <li><strong>Desconfie de “sempre” e “nunca”.</strong> Em clínica, quase tudo depende do caso.</li>
+                <li><strong>Resolva o que sabe.</strong> Marque as duvidosas e volte nelas depois.</li>
+              </ul>
+            </div>
+            <div class="side-card">
+              <h3>Histórico</h3>
+              <ul class="history-list" id="exam-history"><li class="empty-history">Nenhum simulado ainda.</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exam-game" id="exam-game" hidden>
+          <div class="exam-top">
+            <div class="exam-timer" id="exam-timer"><svg><use href="#i-clock"></use></svg> <strong>45:00</strong></div>
+            <span id="exam-progress-label">0 de 30 respondidas</span>
+            <button class="btn btn-small btn-primary" id="btn-finish-exam">Entregar</button>
+          </div>
+          <div class="exam-layout">
+            <article class="question-card exam-question">
+              <div class="question-tags"><span id="exam-q-module"></span><span id="exam-q-level"></span></div>
+              <h2 id="exam-question"></h2>
+              <div class="options" id="exam-options"></div>
+              <div class="question-actions">
+                <button class="btn btn-ghost" id="btn-exam-prev">Anterior</button>
+                <button class="btn btn-ghost" id="btn-exam-mark">Marcar para revisar</button>
+                <button class="btn btn-primary" id="btn-exam-next">Próxima <svg><use href="#i-arrow"></use></svg></button>
+              </div>
+            </article>
+            <aside class="exam-palette">
+              <h3>Mapa de questões</h3>
+              <div class="palette" id="exam-palette"></div>
+              <div class="palette-legend">
+                <span><i class="legend-answered"></i> respondida</span>
+                <span><i class="legend-marked"></i> revisar</span>
+                <span><i class="legend-empty"></i> em branco</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="quiz-results" id="exam-results" hidden>
+          <div class="result-hero">
+            <span class="result-icon"><svg><use href="#i-trophy"></use></svg></span>
+            <p class="eyebrow">Simulado concluído</p>
+            <h2 id="exam-result-title">Seu resultado</h2>
+            <div class="result-score"><strong id="exam-result-score">0</strong><span id="exam-result-total">/ 30</span></div>
+            <p id="exam-result-message"></p>
+            <div class="result-actions">
+              <button class="btn btn-primary" id="btn-exam-review">Revisar todas</button>
+              <button class="btn btn-ghost" id="btn-exam-retry">Novo simulado</button>
+            </div>
+          </div>
+          <div class="result-breakdown" id="exam-breakdown"></div>
+          <div class="review-list" id="exam-review"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESUMÃO ===================== -->
+    <section class="view" id="view-resumo" data-view-name="resumo" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head page-head-row">
+          <div>
+            <p class="eyebrow">Revisão de véspera</p>
+            <h1>Resumão</h1>
+            <p>O essencial das quatro UCs: classificações, sequências, doses e pegadinhas.</p>
+          </div>
+          <button class="btn btn-ghost btn-small" id="btn-print"><svg><use href="#i-print"></use></svg> Imprimir</button>
+        </header>
+
+        <div class="summary-tabs" role="tablist">
+          <button class="summary-tab active" data-summary-tab="mapa" role="tab" aria-selected="true">Mapa da prova</button>
+          <button class="summary-tab" data-summary-tab="periodontia" role="tab" aria-selected="false">Periodontia</button>
+          <button class="summary-tab" data-summary-tab="dentistica" role="tab" aria-selected="false">Dentística</button>
+          <button class="summary-tab" data-summary-tab="protese" role="tab" aria-selected="false">Prótese</button>
+          <button class="summary-tab" data-summary-tab="cirurgia" role="tab" aria-selected="false">Cirurgia</button>
+          <button class="summary-tab" data-summary-tab="pegadinhas" role="tab" aria-selected="false">Pegadinhas</button>
+        </div>
+
+        <div class="summary-panel active" data-summary-panel="mapa">
+          <section class="summary-note">
+            <h2>Como a prova integra as quatro áreas</h2>
+            <p>A questão típica de Clínica Integrada começa com um caso e pede a <strong>próxima conduta</strong>, a <strong>sequência do plano</strong> ou o <strong>porquê</strong> de uma escolha. Quase nunca é uma definição isolada.</p>
+            <ol class="steps">
+              <li><strong>Estabilize.</strong> Urgência, dor, infecção e sangramento vêm antes de qualquer reabilitação.</li>
+              <li><strong>Controle a doença.</strong> Periodontite e cárie precisam estar controladas antes de prótese e dentística definitiva.</li>
+              <li><strong>Reavalie.</strong> A reavaliação periodontal (4–8 semanas após a RAR) define o que entra em cirurgia.</li>
+              <li><strong>Reabilite.</strong> Dentística, endodontia e prótese na sequência que devolve função e estética.</li>
+              <li><strong>Mantenha.</strong> Sem manutenção, o tratamento volta a falhar. A prova adora essa etapa.</li>
+            </ol>
+          </section>
+          <div class="table-card">
+            <h3>Peso esperado por área</h3>
+            <table>
+              <thead><tr><th>UC</th><th>O que mais aparece</th><th>Peso relativo</th></tr></thead>
+              <tbody>
+                <tr><td>Periodontia</td><td>Classificação 2017, PSR, RAR, manutenção</td><td>~30%</td></tr>
+                <tr><td>Dentística</td><td>Cárie/ICDAS, adesão, resina, proteção pulpar</td><td>~25%</td></tr>
+                <tr><td>Prótese</td><td>PPR, coroas, PT, oclusão</td><td>~25%</td></tr>
+                <tr><td>Cirurgia</td><td>Exodontia, anestesia, sutura, complicações</td><td>~20%</td></tr>
+              </tbody>
+            </table>
+            <p class="mini-note">Percentuais aproximados, para orientar o tempo de estudo. Confirme o programa oficial na uLife.</p>
+          </div>
+          <section class="summary-note">
+            <h2>Três perguntas que resolvem metade dos casos</h2>
+            <ul>
+              <li><strong>“A doença está controlada?”</strong> Se não, não vá para prótese/dentística definitiva.</li>
+              <li><strong>“Qual é o risco do paciente?”</strong> Tabaco, diabetes, higiene e histórico mudam o plano e o prognóstico.</li>
+              <li><strong>“O que é reversível e o que é definitivo?”</strong> Comece pelo reversível e pelo que devolve saúde.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="summary-panel" data-summary-panel="periodontia">
+          <div class="table-card">
+            <h3>Classificação das doenças periodontais (2017) — o esqueleto</h3>
+            <table>
+              <thead><tr><th>Categoria</th><th>Critério central</th></tr></thead>
+              <tbody>
+                <tr><td>Saúde periodontal</td><td>Sem sangramento ao sondar (ou &lt;10%), profundidade ≤3 mm, sem perda de inserção.</td></tr>
+                <tr><td>Gengivite induzida por placa</td><td>Sangramento e inflamação gengival, sem perda de inserção; reversível com controle de placa.</td></tr>
+                <tr><td>Periodontite</td><td>Perda de inserção e de osso alveolar; estágio (I–IV) e grau (A–C).</td></tr>
+                <tr><td>Peri-implantite</td><td>Inflamação peri-implantar com perda óssea progressiva; mucosite é a forma reversível.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-card">
+            <h3>Estágio x grau — não confunda</h3>
+            <table>
+              <thead><tr><th></th><th>O que mede</th><th>Como lembrar</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Estágio I–IV</strong></td><td>Gravidade e extensão da perda; complexidade do tratamento.</td><td>Quanto de doença e quão difícil de tratar.</td></tr>
+                <tr><td><strong>Grau A–C</strong></td><td>Velocidade de progressão; risco (tabaco, diabetes).</td><td>Quão rápido a doença avança.</td></tr>
+              </tbody>
+            </table>
+            <p class="mini-note">Estágio III/IV: perda de inserção interproximal ≥5 mm, perda óssea radiográfica ≥33%, dentes perdidos por periodontite, defeitos verticais, envolvimento de furca, mobilidade. Grau C: progressão rápida, tabaco ≥10 cigarros/dia, diabetes mal controlado (HbA1c ≥7%).</p>
+          </div>
+          <section class="summary-note">
+            <h2>Exame e tratamento em 6 linhas</h2>
+            <ol class="steps">
+              <li><strong>PSR:</strong> sextantes, código 0–4; código 4 ou * → exame periodontal completo.</li>
+              <li><strong>Sondagem:</strong> profundidade, margem gengival, sangramento, supuração, furca, mobilidade.</li>
+              <li><strong>Diagnóstico:</strong> estágio + grau + extensão (localizada &lt;30% dos dentes; generalizada ≥30%).</li>
+              <li><strong>RAR:</strong> instrumentação subgengival + instrução de higiene; reavaliar em 4–8 semanas.</li>
+              <li><strong>Cirurgia:</strong> retalho, regeneração, gengivectomia — indicada quando o controle não resolve.</li>
+              <li><strong>Manutenção:</strong> intervalos de 3–6 meses conforme risco; reavaliar placa, sangramento e bolsas.</li>
+            </ol>
+          </section>
+          <div class="trap-grid">
+            <article class="trap-card"><span class="trap-num">01</span><div><h3>“PSR 4 já é periodontite grave”</h3><p><strong>Não.</strong> PSR é triagem. Código 4 manda fazer exame completo; o diagnóstico vem da classificação.</p></div></article>
+            <article class="trap-card"><span class="trap-num">02</span><div><h3>“Grau é o mesmo que estágio”</h3><p><strong>Não.</strong> Estágio = gravidade/complexidade. Grau = velocidade/risco de progressão.</p></div></article>
+          </div>
+        </div>
+
+        <div class="summary-panel" data-summary-panel="dentistica">
+          <div class="table-card">
+            <h3>Cárie: da lesão à decisão</h3>
+            <table>
+              <thead><tr><th>ICDAS</th><th>Achado</th><th>Conduta típica</th></tr></thead>
+              <tbody>
+                <tr><td>0</td><td>Saudável</td><td>Prevenção e controle de placa.</td></tr>
+                <tr><td>1–2</td><td>Mancha branca / opacidade inicial, esmalte íntegro</td><td>Não invasivo: flúor, higiene, controle de dieta, selante quando indicado.</td></tr>
+                <tr><td>3–4</td><td>Microcavidade / sombra sem exposição dentinária evidente</td><td>Mínima intervenção; infiltrar ou restaurar conforme atividade e acesso.</td></tr>
+                <tr><td>5–6</td><td>Cavidade com dentina exposta, lesão evidente</td><td>Restauração; remover tecido cariado e proteger o complexo dentinopulpar.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-card">
+            <h3>Adesão em 4 passos</h3>
+            <table>
+              <thead><tr><th>Etapa</th><th>Objetivo</th><th>Ponto de prova</th></tr></thead>
+              <tbody>
+                <tr><td>Condicionamento com ácido fosfórico 35–37%</td><td>Desmineralizar esmalte e expor rede de colágeno na dentina.</td><td>Esmalte 15–30 s; dentina 15 s (não secar demais).</td></tr>
+                <tr><td>Lavagem e controle de umidade</td><td>Remover ácido sem colapsar o colágeno.</td><td>Dentina úmida (brilhante), não encharcada.</td></tr>
+                <tr><td>Primer</td><td>Molhar o colágeno e melhorar a penetração do monômero.</td><td>Evaporar o solvente antes de fotoativar.</td></tr>
+                <tr><td>Bond / adesivo</td><td>Formar a camada híbrida e unir resina ao substrato.</td><td>Fotoativar conforme o fabricante; não contaminar.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="summary-note">
+            <h2>Resina composta: o que derruba</h2>
+            <ul>
+              <li><strong>Incrementos de 2 mm</strong> (ou conforme a marca) para fotoativação eficaz.</li>
+              <li><strong>Contração de polimerização</strong> gera tensão; fator C alto em cavidades com muitas paredes.</li>
+              <li><strong>Fotoativação:</strong> potência, distância, tempo e barreira. Incremento espesso = grau de conversão baixo.</li>
+              <li><strong>Acabamento e polimento</strong> reduzem placa, manchamento e irritação gengival.</li>
+              <li><strong>Sensibilidade pós-operatória:</strong> verifique selamento, excesso de ácido, camada adesiva e oclusão.</li>
+            </ul>
+          </section>
+          <div class="trap-grid">
+            <article class="trap-card"><span class="trap-num">01</span><div><h3>“Toda mancha branca precisa de broca”</h3><p><strong>Não.</strong> Lesão inicial ativa se trata com controle de placa, flúor e dieta. Broca é para cavitação/atividade.</p></div></article>
+            <article class="trap-card"><span class="trap-num">02</span><div><h3>“Adesivo dispensa fotoativação”</h3><p><strong>Depende do sistema.</strong> A maioria dos adesivos é fotoativada; siga a bula. Evaporar solvente é obrigatório.</p></div></article>
+          </div>
+        </div>
+
+        <div class="summary-panel" data-summary-panel="protese">
+          <div class="table-card">
+            <h3>PPR — classificação de Kennedy</h3>
+            <table>
+              <thead><tr><th>Classe</th><th>Característica</th></tr></thead>
+              <tbody>
+                <tr><td>I</td><td>Extremidade livre bilateral.</td></tr>
+                <tr><td>II</td><td>Extremidade livre unilateral.</td></tr>
+                <tr><td>III</td><td>Espaço intercalado unilateral, com dentes naturais anterior e posterior.</td></tr>
+                <tr><td>IV</td><td>Espaço intercalado anterior, cruzando a linha média.</td></tr>
+              </tbody>
+            </table>
+            <p class="mini-note">Regras de Applegate: classifique pelo espaço mais posterior; se o último dente perdido for anterior, classe IV; o último dente remanescente conta; dentes extrarradiculares não entram; a classe não muda com a perda de terceiros molares.</p>
+          </div>
+          <div class="table-card">
+            <h3>Componentes da PPR</h3>
+            <table>
+              <thead><tr><th>Componente</th><th>Função</th></tr></thead>
+              <tbody>
+                <tr><td>Apoio</td><td>Transmite carga ao eixo longitudinal do dente; impede intrusão.</td></tr>
+                <tr><td>Grampo</td><td>Retenção e estabilidade; braço de retenção na zona retentiva.</td></tr>
+                <tr><td>Conector maior</td><td>Une as partes e distribui forças; rígido.</td></tr>
+                <tr><td>Conector menor</td><td>Liga o selim ao conector maior.</td></tr>
+                <tr><td>Selim / base</td><td>Apoia os dentes artificiais e distribui a carga à mucosa.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="summary-note">
+            <h2>Prótese total e oclusão</h2>
+            <ul>
+              <li><strong>PT:</strong> moldagem preliminar → individual → planos de cera → montagem → prova → processamento → instalação e ajustes.</li>
+              <li><strong>Reabsorção óssea</strong> é contínua; a prótese precisa de reembasamento/controle periódico.</li>
+              <li><strong>Oclusão balanceada</strong> na PT: contatos bilaterais simultâneos e equilíbrio em movimentos.</li>
+              <li><strong>RC x MIC:</strong> RC é posição maxilomandibular de referência; MIC é o máximo de contatos dentários. Em reabilitação ampla, muitas vezes se trabalha em RC.</li>
+              <li><strong>Ajuste oclusal</strong> resolve contatos prematuros, dor e instabilidade — sempre após estabilizar a prótese.</li>
+            </ul>
+          </section>
+          <div class="trap-grid">
+            <article class="trap-card"><span class="trap-num">01</span><div><h3>“Kennedy IV pode ter espaço posterior”</h3><p><strong>Errado.</strong> Classe IV é espaço anterior cruzando a linha média. Se houver espaço posterior, a classificação muda.</p></div></article>
+            <article class="trap-card"><span class="trap-num">02</span><div><h3>“PPR é só estética”</h3><p><strong>Não.</strong> Devolve função, estabiliza dentes e distribui cargas; o planejamento é protético e periodontal.</p></div></article>
+          </div>
+        </div>
+
+        <div class="summary-panel" data-summary-panel="cirurgia">
+          <div class="table-card">
+            <h3>Exodontia: sequência que a prova cobra</h3>
+            <table>
+              <thead><tr><th>Etapa</th><th>Objetivo</th></tr></thead>
+              <tbody>
+                <tr><td>Avaliação</td><td>Anamnese, exames, riscos, posição do dente, anestesia.</td></tr>
+                <tr><td>Sindesmotomia</td><td>Romper fibras do ligamento periodontal.</td></tr>
+                <tr><td>Luxação / fórceps</td><td>Expandir o alvéolo e liberar o dente; movimentos controlados.</td></tr>
+                <tr><td>Odontossecção</td><td>Dentes multirradiculares ou impactados; reduz trauma.</td></tr>
+                <tr><td>Toalete e sutura</td><td>Remover tecido, regularizar osso, aproximar tecidos.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-card">
+            <h3>Anestésicos: doses máximas (referência)</h3>
+            <table>
+              <thead><tr><th>Sal</th><th>Máx. adulto saudável</th><th>Observação</th></tr></thead>
+              <tbody>
+                <tr><td>Lidocaína 2% + epinefrina 1:100.000</td><td>~4,4 mg/kg; máx. ~300 mg (≈15 tubetes de 1,8 mL)</td><td>Não ultrapassar; calcular por peso.</td></tr>
+                <tr><td>Mepivacaína 2%</td><td>~4,4 mg/kg; máx. ~300 mg</td><td>Sem vasoconstritor: menor duração.</td></tr>
+                <tr><td>Articaína 4% + epinefrina</td><td>~7 mg/kg; máx. ~500 mg</td><td>Maior toxicidade por concentração; respeitar limite.</td></tr>
+                <tr><td>Prilocaína 3%</td><td>~6 mg/kg; máx. ~400 mg</td><td>Evitar em anemia/metemoglobinemia.</td></tr>
+              </tbody>
+            </table>
+            <p class="mini-note">Valores aproximados de referência. A prova pode usar outra tabela: confira o material da UC. Sempre calcule mg = volume (mL) × concentração (%) × 10.</p>
+          </div>
+          <section class="summary-note">
+            <h2>Pós-operatório e complicações</h2>
+            <ul>
+              <li><strong>Orientações:</strong> não bochechar com força nas primeiras 24 h, não fumar, não usar canudo, manter higiene suave, compressa fria nas primeiras 24 h.</li>
+              <li><strong>Hemorragia:</strong> compressão com gaze; se persistir, avaliar coagulopatia e sutura.</li>
+              <li><strong>Alveolite:</strong> dor latejante e odor fétido alguns dias após; tratamento com limpeza e curativo.</li>
+              <li><strong>Complicações:</strong> fratura radicular, comunicação buco-sinusal, parestesia, infecção, deslocamento de raiz.</li>
+              <li><strong>Urgência:</strong> síncope (posição supina), hipoglicemia, crise hipertensiva, alergia e PCR — reconhecer e acionar ajuda.</li>
+            </ul>
+          </section>
+          <div class="trap-grid">
+            <article class="trap-card"><span class="trap-num">01</span><div><h3>“Bochechar no mesmo dia ajuda a limpar”</h3><p><strong>Não.</strong> Nas primeiras 24 h, bochecho vigoroso remove o coágulo e favorece alveolite.</p></div></article>
+            <article class="trap-card"><span class="trap-num">02</span><div><h3>“Mais anestésico resolve dor”</h3><p><strong>Cuidado.</strong> Respeite a dose máxima por peso. Dor pode exigir técnica diferente, não mais volume.</p></div></article>
+          </div>
+        </div>
+
+        <div class="summary-panel" data-summary-panel="pegadinhas">
+          <div class="trap-grid">
+            <article class="trap-card"><span class="trap-num">01</span><div><h3>“Saúde periodontal = ausência de sangramento”</h3><p><strong>Quase.</strong> O critério inclui profundidade ≤3 mm e ausência de perda de inserção; sangramento &lt;10% é aceito em saúde.</p></div></article>
+            <article class="trap-card"><span class="trap-num">02</span><div><h3>“Estágio IV é sempre grau C”</h3><p><strong>Não.</strong> Estágio e grau são eixos independentes. Há estágio IV grau B.</p></div></article>
+            <article class="trap-card"><span class="trap-num">03</span><div><h3>“RAR é a mesma coisa que profilaxia”</h3><p><strong>Não.</strong> Profilaxia é supragengival; RAR é subgengival, com instrumentação e controle de placa.</p></div></article>
+            <article class="trap-card"><span class="trap-num">04</span><div><h3>“Lesão de cárie inicial é irreversível”</h3><p><strong>Não.</strong> Mancha branca ativa pode remineralizar com flúor, higiene e dieta.</p></div></article>
+            <article class="trap-card"><span class="trap-num">05</span><div><h3>“Condicionar dentina por 30 s é igual a esmalte”</h3><p><strong>Não.</strong> Dentina tem mais água e colágeno; tempo e umidade são diferentes. Secar demais colapsa o colágeno.</p></div></article>
+            <article class="trap-card"><span class="trap-num">06</span><div><h3>“Kennedy é definido pelo espaço mais anterior”</h3><p><strong>Errado.</strong> Classifica-se pelo espaço desdentado mais posterior; regras de Applegate completam.</p></div></article>
+            <article class="trap-card"><span class="trap-num">07</span><div><h3>“Prótese total não precisa de ajuste”</h3><p><strong>Não.</strong> Reabsorção óssea e adaptação exigem controles e reembasamentos.</p></div></article>
+            <article class="trap-card"><span class="trap-num">08</span><div><h3>“Extração difícil se resolve com mais força”</h3><p><strong>Não.</strong> Odontossecção e planejamento reduzem trauma; força excessiva fratura raiz e osso.</p></div></article>
+            <article class="trap-card"><span class="trap-num">09</span><div><h3>“Anestesia com vasoconstritor é proibida em cardiopata”</h3><p><strong>Depende.</strong> A maioria dos cardiopatas controlados tolera; avaliar risco, dose e interação. Não é proibição absoluta.</p></div></article>
+            <article class="trap-card"><span class="trap-num">10</span><div><h3>“Periodontite tratada dispensa manutenção”</h3><p><strong>Não.</strong> Sem manutenção periódica, a doença recidiva. É parte do tratamento, não extra.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MATERIAIS ===================== -->
+    <section class="view" id="view-materiais" data-view-name="materiais" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Acervo de apoio</p>
+          <h1>Materiais</h1>
+          <p>Referências para conferir o que o site resume e para levar para a clínica. O material oficial da disciplina fica na uLife.</p>
+        </header>
+
+        <section class="materials-group">
+          <div class="materials-group-head"><h2>Referências essenciais</h2><span>5 obras</span></div>
+          <div class="materials-grid">
+            <a class="material-card" data-subject="geral" href="https://www.ulife.com.br" target="_blank" rel="noopener">
+              <span class="material-kind">Plataforma</span>
+              <span class="material-copy"><strong>uLife — plano de ensino e materiais das UCs</strong><span>Confirme datas, horários, salas e o programa oficial da prova.</span></span>
+              <span class="material-open" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </a>
+            <div class="material-card" data-subject="perio">
+              <span class="material-kind">Periodontia</span>
+              <span class="material-copy"><strong>Newman &amp; Carranza — Periodontia Clínica</strong><span>Classificação 2017, exame, RAR, cirurgia e manutenção.</span></span>
+            </div>
+            <div class="material-card" data-subject="dent">
+              <span class="material-kind">Dentística</span>
+              <span class="material-copy"><strong>Mondelli — Dentística Restauradora</strong><span>Preparos, adesão, resinas e proteção do complexo dentinopulpar.</span></span>
+            </div>
+            <div class="material-card" data-subject="prot">
+              <span class="material-kind">Prótese</span>
+              <span class="material-copy"><strong>Telles — Prótese Total</strong><span>Etapas da PT, moldagem, oclusão e manutenção.</span></span>
+            </div>
+            <div class="material-card" data-subject="cir">
+              <span class="material-kind">Cirurgia</span>
+              <span class="material-copy"><strong>Malamed — Manual de Anestesia Local</strong><span>Técnicas, doses máximas, vasoconstritores e urgências.</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="materials-group">
+          <div class="materials-group-head"><h2>Protocolos para revisar</h2><span>4 rotinas</span></div>
+          <div class="materials-grid">
+            <div class="material-card" data-subject="perio"><span class="material-kind">Periodontia</span><span class="material-copy"><strong>Exame periodontal completo</strong><span>PSR → sondagem 6 sítios → sangramento → furca → mobilidade → diagnóstico estagiado.</span></span></div>
+            <div class="material-card" data-subject="dent"><span class="material-kind">Dentística</span><span class="material-copy"><strong>Restauração em resina</strong><span>Isolamento → preparo → condicionamento → adesivo → incrementos → fotoativação → acabamento.</span></span></div>
+            <div class="material-card" data-subject="prot"><span class="material-kind">Prótese</span><span class="material-copy"><strong>PPR em 8 passos</strong><span>Diagnóstico → planejamento → moldagem → prova → ajuste → instalação → instruções → controle.</span></span></div>
+            <div class="material-card" data-subject="cir"><span class="material-kind">Cirurgia</span><span class="material-copy"><strong>Exodontia segura</strong><span>Avaliação → anestesia → sindesmotomia → luxação → extração → toalete → sutura → orientações.</span></span></div>
+          </div>
+        </section>
+
+        <section class="summary-note">
+          <h2>Como conferir o conteúdo oficial</h2>
+          <p>Entre na uLife com seu login, abra a disciplina de <strong>Clínica Integrada</strong> e confira: plano de ensino, data/horário da prova, temas das UCs de Periodontia, Dentística, Prótese e Cirurgia, e materiais complementares. Se a data da prova mudar, ajuste no botão <strong>ajustar</strong> da página inicial.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===================== GLOSSÁRIO ===================== -->
+    <section class="view" id="view-glossario" data-view-name="glossario" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Consulte rápido</p>
+          <h1>Glossário</h1>
+          <p>Termos que aparecem nas quatro áreas. Busque por palavra ou navegue pela letra.</p>
+        </header>
+        <div class="glossary-tools">
+          <label class="field search-field"><span>Buscar termo</span><input type="search" id="glossary-search" placeholder="Ex.: estágio, adesão, Kennedy, alveolite"></label>
+          <div class="glossary-letters" id="glossary-letters" aria-label="Letras"></div>
+        </div>
+        <div class="glossary-list" id="glossary-list"></div>
+        <p class="empty-state" id="glossary-empty" hidden>Nenhum termo encontrado. Tente outra palavra.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PLANO ===================== -->
+    <section class="view" id="view-plano" data-view-name="plano" hidden>
+      <div class="wrap page-wrap">
+        <header class="page-head">
+          <p class="eyebrow">Organize a semana</p>
+          <h1>Plano de estudo</h1>
+          <p>Sete dias, duas áreas por dia e uma revisão final. Marque as tarefas conforme concluir.</p>
+        </header>
+        <div class="plan-progress-row">
+          <div><span class="eyebrow">Progresso do plano</span><strong id="plan-progress">0%</strong></div>
+          <div class="mini-bar"><i id="plan-progress-bar"></i></div>
+        </div>
+        <div class="plan-list" id="plan-list"></div>
+        <section class="summary-note">
+          <h2>Se o tempo apertar</h2>
+          <p>Faça nesta ordem: classificação periodontal (estágio/grau) → ICDAS e adesão → Kennedy e componentes da PPR → exodontia e doses anestésicas. Depois, 30 questões e o simulado. O restante é refinamento.</p>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><span class="brand-mark"><svg><use href="#i-tooth"></use></svg></span><div><strong>Clínica Integrada</strong><span>caderno de estudos · odontologia</span></div></div>
+      <p>Conteúdo de apoio para Periodontia, Dentística, Prótese e Cirurgia. Não substitui o material oficial nem protocolos clínicos.</p>
+      <button class="btn btn-ghost btn-small" id="btn-top"><svg><use href="#i-arrow-up"></use></svg> Voltar ao topo</button>
+    </div>
+  </footer>
+
+  <dialog class="search-dialog" id="search-dialog">
+    <div class="search-head">
+      <svg><use href="#i-search"></use></svg>
+      <input type="search" id="search-input" placeholder="Buscar aulas, flashcards e glossário…" aria-label="Buscar no site">
+      <button class="icon-btn" id="btn-close-search" aria-label="Fechar busca"><svg><use href="#i-close"></use></svg></button>
+    </div>
+    <div class="search-results" id="search-results"><p class="search-hint">Digite pelo menos 2 letras. Ex.: “estágio”, “adesão”, “Kennedy”, “alveolite”.</p></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/modules-1.js"></script>
+  <script src="data/modules-2.js"></script>
+  <script src="data/modules-3.js"></script>
+  <script src="data/cards.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="data/materials.js"></script>
+  <script src="data/meta.js"></script>
+  <script src="data/plans.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
